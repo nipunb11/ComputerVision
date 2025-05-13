@@ -72,6 +72,7 @@ scipy==1.15.3
 ```
 > ⚠️ **Note:** `bpy` (Blender Python API) may require a Blender-compatible Python environment.  
 > Refer to [Blender’s official scripting documentation](https://docs.blender.org/api/current/info_quickstart.html) for setup instructions.
+> Also you must have blender itself installed on your machine.
 
 ## 📌 Notes
 - Performance may vary depending on CPU/GPU specs. The current implementation is optimized for offline processing.
