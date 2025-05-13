@@ -83,9 +83,9 @@ scipy==1.15.3
 ## 👥 Team
 
 - **Nipun Bhatnagar** (`bhatn058`)  
-- **Buddha Subedi**  
-- **Yassin Ali** — [GitHub Profile](https://github.com/Y-Elsayed)  
-- **Thomas Yip**
+- **Buddha Subedi**  (`subed042`)
+- **Yassin Ali** — (`ali00740`) [GitHub Profile](https://github.com/Y-Elsayed)  
+- **Thomas Yip** (`yip00023`) 
 
 University of Minnesota  
 CSCI 5561 — Computer Vision
@@ -94,7 +94,30 @@ CSCI 5561 — Computer Vision
 
 ## 🏁 Future Work
 
-- Real-time pose filtering and smoothing.
-- Automatic whiteboard detection (eliminating manual corner selection).
-- Integration with OCR and lecture summarization tools.
 
+- **Automatic Whiteboard Detection**  
+  Replace the current manual corner selection with automated detection using segmentation models (e.g., Segment Anything Model) or geometric edge-aware methods to improve usability and reduce setup time.
+
+- **Lighting-Consistent Inpainting**  
+  Integrate photometric normalization or illumination-aware inpainting models to correct lighting mismatches between original frames and background patches during professor removal.
+
+- **Real-Time Pose Filtering and Joint Suppression**  
+  Implement confidence-based joint filtering and Kalman filtering for smoother, more stable 3D reconstructions—reducing hallucinated or jittery movements, especially under occlusion.
+
+- **Pre-Processing of 3D Keypoints for Blender**  
+  Filter and smooth noisy keypoints before feeding them into Blender to enhance animation realism and reduce bone instability.
+
+- **Configurable Rendering Parameters**  
+  Expose Blender render settings (e.g., resolution, samples, background path) to users via a config file or interface for easier tuning and reproducibility.
+
+- **Lecture Note Generation via AI**  
+  Apply OCR and AI-driven summarization on infilled whiteboard frames to auto-generate structured lecture notes—creating an end-to-end educational enhancement tool.
+
+- **Calibration Quality Checks**  
+  Add automatic validation tools to assess stereo calibration coverage and detect weaknesses before proceeding to reconstruction.
+
+- **Light Source Estimation for Realism**  
+  Explore deep learning-based methods to estimate lighting direction and intensity for better avatar integration into the classroom scene with realistic shadows and highlights.
+
+- **Multi-View Fusion for Pose Accuracy**  
+  Incorporate depth estimation and advanced fusion methods to handle occlusions and improve the overall spatial accuracy of the avatar.
