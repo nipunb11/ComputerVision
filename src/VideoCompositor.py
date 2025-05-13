@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 
-def process_videos(mask_source_path, pose_video_path, final_background_path="output.mp4", result_path="final_result.mp4"):
+def process_videos(mask_source_path, pose_video_path, scale, final_background_path="output.mp4", result_path="final_result.mp4"):
     """
     Overlays person region from mask_source_path onto final_background_path using segmentation mask.
     Pose detection is done on pose_video_path to track movement and define ROI for segmentation.
@@ -24,8 +24,8 @@ def process_videos(mask_source_path, pose_video_path, final_background_path="out
     mask_cap = cv2.VideoCapture(mask_source_path)
     background_cap = cv2.VideoCapture(final_background_path)
 
-    width = int(pose_cap.get(cv2.CAP_PROP_FRAME_WIDTH) * 0.5)
-    height = int(pose_cap.get(cv2.CAP_PROP_FRAME_HEIGHT) * 0.5)
+    width = int(pose_cap.get(cv2.CAP_PROP_FRAME_WIDTH) * scale)
+    height = int(pose_cap.get(cv2.CAP_PROP_FRAME_HEIGHT) * scale)
     fps = pose_cap.get(cv2.CAP_PROP_FPS)
 
     total_frames = min(
