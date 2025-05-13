@@ -96,6 +96,7 @@ subprocess.run([
 process_videos(
     mask_source_path="Outputs/render.mp4",
     pose_video_path=f'media/{left_video}_pose.mp4',
+    scale=(resolution_num/100),
     final_background_path="Outputs/inpainted.mp4",
     result_path="Outputs/final_result.mp4"
 )
